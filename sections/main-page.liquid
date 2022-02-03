@@ -19,9 +19,16 @@
 {%- endstyle -%}
 
 <div class="page-width page-width--narrow section-{{ section.id }}-padding">
-  <h1 class="main-page-title page-title h0">
-    {{ page.title | escape }}
+  <h1 class="main-page-title page-title h0 dummy-class">
+    {{ page.title | escape }}~~
   </h1>
+
+  {% if customer %}
+  <div>Welcome back!</div>
+  {% else %}
+  <div>Hi there!!</div>
+  {% endif %}
+  
   <div class="rte">
     {{ page.content }}
   </div>
